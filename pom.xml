@@ -1085,4 +1085,19 @@
         <json-version>20250517</json-version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+	<distributionManagement>
+		<repository>
+			<id>codeartifact</id>
+			<name>codeartifact-release</name>
+			<url>${release-repo-url}</url>
+			<layout>default</layout>
+		</repository>
+		<snapshotRepository>
+			<uniqueVersion>false</uniqueVersion>
+			<id>codeartifact</id>
+			<name>codeartifact-snapshots</name>
+			<url>${snapshot-repo-url}</url>
+		</snapshotRepository>
+	</distributionManagement>
 </project>
