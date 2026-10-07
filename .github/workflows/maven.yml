@@ -1,0 +1,17 @@
+name: ci
+
+on:
+  pull_request:
+    branches: [ 'main', 'release/**', 'qa/**', 'hotfix/**' ]
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  global:
+    uses: orientaltrading/.github/.github/workflows/check-maven.yml@main
+    secrets: inherit
+    with:
+      java-version: 8
